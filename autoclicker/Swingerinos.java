@@ -1,20 +1,21 @@
 package autoclicker;
 
-import java.awt.EventQueue;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.AWTException;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 
 public class Swingerinos extends Click implements WindowListener,ActionListener {
+
+	private int numClicks = 0;
+	TextField text;
 
 	private JFrame frame;
 	/**
@@ -57,14 +58,19 @@ public class Swingerinos extends Click implements WindowListener,ActionListener 
 		frame.getContentPane().add(panel, BorderLayout.WEST);
 		
 		JButton btnNewButton = new JButton("Toggle On / Off");
+		text = new TextField(20);
+		text.setLocation(100, 100);
 		btnNewButton.addActionListener( this);
 		btnNewButton.setToolTipText("Toggles the  autoclicker on / off.");
 		panel.add(btnNewButton);
+		panel.add(text);
 		
 	}
 		
     public void actionPerformed(ActionEvent e) {
     	toggle();
+		numClicks++;
+		text.setText(""+numClicks);
     }
 
 
