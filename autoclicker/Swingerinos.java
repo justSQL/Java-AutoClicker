@@ -10,9 +10,11 @@ import javax.swing.JLabel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.AWTException;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 
-public class Swingerinos extends Click {
+public class Swingerinos extends Click implements WindowListener,ActionListener {
 
 	private JFrame frame;
 	/**
@@ -55,14 +57,26 @@ public class Swingerinos extends Click {
 		frame.getContentPane().add(panel, BorderLayout.WEST);
 		
 		JButton btnNewButton = new JButton("Toggle On / Off");
-		btnNewButton.addActionListener((ActionListener) this);
+		btnNewButton.addActionListener( this);
 		btnNewButton.setToolTipText("Toggles the  autoclicker on / off.");
 		panel.add(btnNewButton);
 		
 	}
 		
     public void actionPerformed(ActionEvent e) {
-    toggle();
+    	toggle();
     }
-	
+
+
+	public void windowClosing(WindowEvent e) {
+		System.exit(0);
+	}
+
+	public void windowOpened(WindowEvent e) {}
+	public void windowActivated(WindowEvent e) {}
+	public void windowIconified(WindowEvent e) {}
+	public void windowDeiconified(WindowEvent e) {}
+	public void windowDeactivated(WindowEvent e) {}
+	public void windowClosed(WindowEvent e) {}
+
 }

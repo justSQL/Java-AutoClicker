@@ -1,18 +1,8 @@
 package autoclicker;
 
-import java.awt.Robot;
-import java.awt.event.ActionEvent;
+import java.awt.*;
 import java.awt.event.InputEvent;
-import java.awt.AWTException;
 
-//The main program for the autoclicker
-class AutoClicker {
-    public static void main(String[] args) throws AWTException {
-        Click click = new Click(true);
-        click.clicker();
-    }
-}
-//The clicker object:
 class Click {
     private boolean active;
     private Robot robot;
@@ -29,11 +19,11 @@ class Click {
     public Click (boolean active) throws AWTException {
         this(active, new Robot());
     }
-//TODO: add click.toggle() to somewhere and control da clicker
+    //TODO: add click.toggle() to somewhere and control da clicker
     public void toggle() {
         active = !active;
     }
-    
+
 
     public void clicker () {
         while (active) {
