@@ -19,11 +19,11 @@ class Click {
     public Click (boolean active) throws AWTException {
         this(active, new Robot());
     }
+
     //TODO: add click.toggle() to somewhere and control da clicker
     public void toggle() {
         active = !active;
     }
-
 
     public void clicker () {
         while (active) {
