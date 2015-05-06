@@ -16,7 +16,7 @@ public class Click {
         this(false, new Robot());
     }
 
-    public Click (boolean active) throws AWTException {
+    public Click(boolean active) throws AWTException {
         this(active, new Robot());
     }
 
@@ -25,7 +25,7 @@ public class Click {
         active = !active;
     }
 
-    public void clicker () {
+    public void clicker() {
         while (active) {
             robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);

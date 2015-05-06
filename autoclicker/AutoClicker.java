@@ -8,6 +8,10 @@ import java.awt.AWTException;
 public class AutoClicker {
     public static void main(String[] args) throws AWTException {
         Click click = new Click(true);
-        click.clicker();
+        click.clicker(); 
+        try {
+        Swingerinos sw = new Swingerinos();
+        }
+        catch (AWTException e) { System.exit(-1); }
     }
 }
