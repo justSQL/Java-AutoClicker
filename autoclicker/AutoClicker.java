@@ -10,7 +10,7 @@ public class AutoClicker {
         Click click = new Click(true);
         click.clicker(); 
         try {
-        Swingerinos sw = new Swingerinos();
+            Swingerinos sw = new Swingerinos();
         }
         catch (AWTException e) { System.exit(-1); }
     }

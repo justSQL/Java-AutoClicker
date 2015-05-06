@@ -64,7 +64,7 @@ public class Swingerinos extends Click implements WindowListener,ActionListener 
 		btnNewButton.setToolTipText("Toggles the  autoclicker on / off.");
 		panel.add(btnNewButton);
 		panel.add(text);
-		
+        frame.setVisible(true);
 	}
 		
     public void actionPerformed(ActionEvent e) {
