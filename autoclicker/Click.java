@@ -3,6 +3,7 @@ package autoclicker;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
+
 public class Click {
     private boolean active;
     private Robot robot;

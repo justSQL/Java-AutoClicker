@@ -49,7 +49,7 @@ public class Swingerinos extends Click implements WindowListener,ActionListener 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	public void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 109);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,7 +68,7 @@ public class Swingerinos extends Click implements WindowListener,ActionListener 
 	}
 		
     public void actionPerformed(ActionEvent e) {
-    	toggle();
+		toggle();
 		numClicks++;
 		text.setText(""+numClicks);
     }
