@@ -13,10 +13,10 @@ public class AutoClicker {
                 click.clicker();
             }
         });
+worker.start();
         try {
-            Swingerinos sw = new Swingerinos();
-            sw.initialize();
+        Swingerinos sw = new Swingerinos();
         }
         catch (AWTException e) { e. printStackTrace(); System.exit(-1); }
-    }
-}
+        }
+        }
