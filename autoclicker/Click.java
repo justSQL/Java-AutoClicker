@@ -21,7 +21,7 @@ public class Click {
         this(active, new Robot());
     }
 
-    //TODO: add click.toggle() to somewhere and control da clicker
+
     public void toggle() {
         active = !active;
     }
@@ -30,7 +30,11 @@ public class Click {
         while (active) {
             robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
             robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-            robot.setAutoDelay(10000);
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
